@@ -1,12 +1,26 @@
 <div>
+  <h1>Data Binding</h1>
+  <div class="container">
+    <div>
+      <p>Nombre: {{person.name}}</p>
+      <input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"/>
+      <p>Valid: {{nameInput.valid}}</p>
+    </div>
+    <div>
+      <p>Age: {{person.age}}</p>
+      <input type="number" required #ageInput="ngModel" [(ngModel)]="person.age" max="24" min="18"/>
+      <p>Valid: {{ageInput.valid}}</p>
+    </div>
+  </div>
+  <hr/>
   <h1>Event Binding</h1>
   <button [disabled]="btnDisabled2">CLIC ON ME</button>
   <button (click)="toggleButton()">TURN ON/OFF</button>
   <hr/>
   <h3>Increase age: {{person.age}}</h3>
   <div class="container">
-    <button (click)="increaseAge()">INCREASE AGE</button>
     <button (click)="decreaseAge()">DECREASE AGE</button>
+    <button (click)="increaseAge()">INCREASE AGE</button>
   </div>
   <hr/>
   <div class="box" (scroll)="onScroll($event)">
