@@ -1,4 +1,18 @@
 <div>
+  <h1>*ngFor</h1>
+  <input type="text" required [(ngModel)]="newName" style="margin: 1em 0;"/>
+  <button (click)="addName()" *ngIf="newName.length > 5; else inputEmpty">Add name</button>
+  <ng-template #inputEmpty>
+    <p *ngIf="person.name">It's empty, you need send a name with +5 letters</p>
+  </ng-template>
+  <ul style="margin: 1em 0;">
+    <li *ngIf="names.length === 0" style="font-size: 2em;">LIST EMPTY !</li>
+    <li *ngFor="let n of names; index as i">
+      My object's list : {{i}} is {{n}}
+      <button (click)="deleteName(i)">Delete</button>
+    </li>
+  </ul>
+  <hr/>
   <h1>*ngIf</h1>
   <input type="text" required [(ngModel)]="person.name" style="margin: 1em 0;"/>
   <p *ngIf="person.name === 'Josue'; else elseBlock">Awesome! You're Josue</p>

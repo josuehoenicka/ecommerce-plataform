@@ -19,6 +19,8 @@ export class AppComponent {
     age: 20,
     heLovesAngular: true
   };
+  names: string[] = ['Josue', 'Jorgelina', 'Juan', 'Jordana', 'Joana'];
+  newName = '';
 
   toggleButton() {
     this.btnDisabled2 = !this.btnDisabled2;
@@ -41,6 +43,15 @@ export class AppComponent {
 
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
+  }
+
+  addName() {
+    this.names.push(this.newName);
+    this.newName = '';
+  }
+
+  deleteName(index: number) {
+    this.names.splice(index, 1);
   }
 
   constructor () {
