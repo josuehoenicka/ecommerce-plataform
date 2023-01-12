@@ -8,6 +8,15 @@
     <button (click)="increaseAge()">INCREASE AGE</button>
     <button (click)="decreaseAge()">DECREASE AGE</button>
   </div>
+  <hr/>
+  <div class="box" (scroll)="onScroll($event)">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ipsa, eum, rem praesentium, vero eos natus sunt distinctio aperiam assumenda iusto omnis neque odio autem. Omnis laboriosam sint ab hic?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas repudiandae maxime est pariatur, incidunt perspiciatis fugiat maiores ab consequatur dolorum rem nulla, dolores fuga corrupti blanditiis nesciunt ipsum, itaque recusandae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, consequatur! Cumque est adipisci aliquid, nesciunt laboriosam delectus obcaecati dolore voluptatem perferendis illum recusandae facere minus tempora laborum nobis aspernatur ratione.</p>
+  </div>
+  <hr/>
+  <p>Nombre: {{person.name}}</p>
+  <input type="text" [placeholder]="person.name" (keyup)="changeName($event)"/>
 </div>
 <hr/>
 <div>

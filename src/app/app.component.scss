@@ -25,6 +25,14 @@ div hr {
   justify-content: space-evenly;
 }
 
+.box {
+  text-align: justify;
+  padding: 1em;
+  width: 20em;
+  height: 10em;
+  overflow: auto;
+}
+
 button {
   border: none;
   outline: none;
