@@ -6,8 +6,23 @@ div {
 }
 
 hr {
+  border: 0.2em black solid;
   width: 100vw;
   margin: 3em 0;
+}
+
+div hr {
+
+  border: 0.1em gray solid;
+  width: 50vw;
+  margin: 1.5em 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  justify-content: space-evenly;
 }
 
 button {
@@ -17,11 +32,16 @@ button {
   background-color: green;
   padding: 1em;
   margin: 1em 0;
+  border-radius: 1em 0 1em 0;
+  transition: 0.5s;
+  font-size: 1em;
 }
 
 button:disabled {
   border: none;
-  background-color: gray;
+  opacity: 0.5;
+  border-radius: 0 1em 0 1em;
+  transition: 0.3s;
 }
 
 progress {

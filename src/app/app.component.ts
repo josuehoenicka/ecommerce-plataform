@@ -10,7 +10,8 @@ export class AppComponent {
   title = 'ecommerce-plataform';
   favNumber:number = 3;
   img: string = 'https://source.unsplash.com/random'
-  btnDisabled: boolean = true;
+  btnDisabled: boolean = false;
+  btnDisabled2: boolean = true;
   progress_a: number = 100;
   progress_b: number = 58;
   person = {
@@ -19,6 +20,17 @@ export class AppComponent {
     heLovesAngular: true
   };
 
+  toggleButton() {
+    this.btnDisabled2 = !this.btnDisabled2;
+  }
+
+  increaseAge() {
+    this.person.age += 1;
+  }
+
+  decreaseAge() {
+    this.person.age -= 1;
+  }
 
   constructor () {
   }
