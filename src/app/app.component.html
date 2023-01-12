@@ -1,4 +1,30 @@
 <div>
+  <h1>[ngSwith]</h1>
+  <input type="text" required [(ngModel)]="person.name" style="margin: 1em 0;"/>
+  <div [ngSwitch]="person.name">
+    <p *ngSwitchCase="'Josue'">You're Josue</p>
+    <p *ngSwitchCase="'Joao'">You're Joao</p>
+    <p *ngSwitchCase="'Jordana'">You're Jordana</p>
+    <p *ngSwitchCase="'Jorgelina'">You're Jorgelina</p>
+    <p *ngSwitch="'Chaina'">You're Chaina</p>
+    <p *ngSwitchDefault>Your name isn't Josue, Joao, Jordana, Jorgelina or Chaina</p>
+    <!-- <p *ngIf="person.name === 'Josue'">You're Josue</p>
+    <p *ngIf="person.name === 'Joao'">You're Joao</p>
+    <p *ngIf="person.name === 'Jordana'">You're Jordana</p>
+    <p *ngIf="person.name === 'Jorgelina'">You're Jorgelina</p>
+    <p *ngIf="person.name === 'Chaina'">You're Chaina</p> -->
+  </div>
+  <hr/>
+  <h1>*ngFor for arrays</h1>
+  <div class="product--grid">
+    <div *ngFor="let p of products" class="product--item">
+      <img [src]="p.image" alt="video game">
+      <h2>${{p.price}}</h2>
+      <h3>{{p.name}}</h3>
+      <h4>☆ {{p.stars}}</h4>
+    </div>
+  </div>
+  <hr/>
   <h1>*ngFor</h1>
   <input type="text" required [(ngModel)]="newName" style="margin: 1em 0;"/>
   <button (click)="addName()" *ngIf="newName.length > 5; else inputEmpty">Add name</button>
