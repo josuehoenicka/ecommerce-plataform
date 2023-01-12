@@ -1,4 +1,11 @@
 <div>
+  <h1>*ngIf</h1>
+  <input type="text" required [(ngModel)]="person.name" style="margin: 1em 0;"/>
+  <p *ngIf="person.name === 'Josue'; else elseBlock">Awesome! You're Josue</p>
+  <ng-template #elseBlock>
+    <p *ngIf="person.name !== 'Josue'">Ops! Your name isn't Josue</p>
+  </ng-template>
+  <hr/>
   <h1>Data Binding</h1>
   <div class="container">
     <div>
