@@ -1,14 +1,41 @@
 div {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  width: 100vw;
+  margin: 3em 0;
+}
+
+button {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: green;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+button:disabled {
+  border: none;
+  background-color: gray;
+}
+
+progress {
+  border-radius: 100%;
+  margin: 1em 0;
 }
 
 img {
+  margin: 1em 0;
   object-fit: cover;
-  width: 50vw;
-  height: 50vh;
+  width: 20em;
+  height: 20em;
+}
+
+p {
+  margin: 1em 0;
 }

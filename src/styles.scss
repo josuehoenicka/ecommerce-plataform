@@ -1,6 +1,6 @@
 :root {
-  --black: #000000;
-  --white: #ffffff;
+  --bg: #ffffff;
+  --text: #000000;
 }
 
 * {
@@ -10,8 +10,8 @@
   scroll-behavior: smooth;
   text-decoration: none;
   user-select: none;
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 body {

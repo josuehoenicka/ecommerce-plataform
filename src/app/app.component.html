@@ -1,5 +1,19 @@
 <div>
-  <h1>{{'Pic '.repeat(5)}}</h1>
-  <img src="{{img}}" alt="">
+  <h1>Title</h1>
+  <button [disabled]="btnDisabled" onclick="btn()">CLIC ON ME</button>
+  <input type="text" [value]="title"/>
+  <progress [max]="progress_a" [value]="progress_b"></progress>
+  <!-- <img [src]="img" alt=""/> -->
+  <div>
+    <p>Nombre: {{person.name}}</p>
+    <p>Age: {{person.age}}</p>
+    <p>Does {{person.name}} love Angular?: {{person.heLovesAngular}}</p>
+  </div>
+</div>
+<hr>
+<div>
+  <h1>{{'Repeat '.repeat(5)}}</h1>
+  <!-- <img src="{{img}}" alt=""/> -->
   <p>Mi número favorito al cuadrado es = {{favNumber + favNumber}}</p>
 </div>
+
