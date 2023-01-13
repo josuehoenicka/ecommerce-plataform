@@ -1,7 +1,19 @@
 <div>
   <h1>Class & Styles</h1>
   <input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name"/>
-  <p>The input is required</p>
+  <p class="message-error" [class.active]="nameInput2.invalid">The input is required</p>
+  <label>Name</label>
+  <input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name"/>
+  <p [style.color]="nameInput3.invalid ? 'red' : 'yellow'">This is a color message!</p>
+  <div style="display: flex; flex-direction: row;">
+    <div style="margin: 0.5em 2.5em;">
+      <label>Insert width scale on rem: (Try with 120 or 400)</label>
+      <input type="text" [(ngModel)]="widthImg" maxlength="3"/>
+    </div>
+    <div style="margin: 0.5em 2.5em;">
+      <img [style.width.px]="widthImg" [src]="products[2].image" alt="image test">
+    </div>
+  </div>
   <hr/>
   <h1>[ngSwith]</h1>
   <input type="text" required [(ngModel)]="person.name" style="margin: 1em 0;"/>

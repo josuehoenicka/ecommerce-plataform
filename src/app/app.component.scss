@@ -26,6 +26,18 @@
   }
 }
 
+.message-error {
+  font-size: 1.3em;
+  padding: 0.3em;
+  background-color: red;
+  color: black;
+  opacity: 0;
+  transition: 0.3s;
+  &.active {
+    opacity: 1;
+  }
+}
+
 .product--item {
   margin: 3em 0;
 }

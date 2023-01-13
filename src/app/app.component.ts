@@ -9,29 +9,20 @@ import { Product } from './product.model'
 
 export class AppComponent {
   title = 'ecommerce-plataform';
-
+  widthImg = 300;
   favNumber:number = 3;
-
   img: string = 'https://source.unsplash.com/random'
-
   btnDisabled: boolean = false;
-
   btnDisabled2: boolean = true;
-
   progress_a: number = 100;
-
   progress_b: number = 58;
-
   person = {
     name: 'Josue',
     age: 20,
     heLovesAngular: true
   };
-
   names: string[] = ['Josue', 'Jorgelina', 'Juan', 'Jordana', 'Joana'];
-
   newName = '';
-
   products: Product[] = [
     {
       name: 'Army Of Two II',
