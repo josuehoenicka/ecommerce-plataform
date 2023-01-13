@@ -38,6 +38,17 @@
   }
 }
 
+.line-error {
+  height: 0;
+  border-bottom: 1px solid;
+  &.valid {
+    border-color: green;
+  }
+  &.invalid {
+    border-color: red;
+  }
+}
+
 .product--item {
   margin: 3em 0;
 }

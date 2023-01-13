@@ -23,6 +23,11 @@ export class AppComponent {
   };
   names: string[] = ['Josue', 'Jorgelina', 'Juan', 'Jordana', 'Joana'];
   newName = '';
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red'
+  };
   products: Product[] = [
     {
       name: 'Army Of Two II',

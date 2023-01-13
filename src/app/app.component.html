@@ -1,4 +1,27 @@
 <div>
+  <h1>NgClass & NgStyle</h1>
+  <input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name"/>
+  <hr class="line-error" [ngClass]="{
+    'valid': nameInput4.valid,
+    'invalid': nameInput4.invalid
+  }">
+  <p class="message-error" [class.active]="nameInput4.invalid">The input is required</p>
+  <div style="display: flex; flex-direction: row;">
+    <div style="margin: 0.5em 2.5em;">
+      <input type="number" [(ngModel)]="box.width"/>
+      <input type="number" [(ngModel)]="box.height"/>
+      <input type="color" [(ngModel)]="box.background"/>
+    </div>
+    <div style="margin: 0.5em 2.5em;">
+      <div [ngStyle]="{
+        'width.px': box.width,
+        'height.px': box.height,
+        'background-color': box.background,
+        'display': 'block'
+      }"></div>
+    </div>
+  </div>
+  <hr/>
   <h1>Class & Styles</h1>
   <input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name"/>
   <p class="message-error" [class.active]="nameInput2.invalid">The input is required</p>
@@ -115,4 +138,3 @@
   <!-- <img src="{{img}}" alt=""/> -->
   <p>My favorite number + my fav number with interpolation is = <span style="color: green;">{{favNumber + favNumber}}</span></p>
 </div>
-
