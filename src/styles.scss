@@ -1,6 +1,8 @@
 :root {
-  --bg: #ffffff;
-  --text: #000000;
+  --bg:#1b1b1b;
+  --text: #8091cefa;
+  --text2: #7f8186fa;
+  --text3: #8091ceb6;
 }
 
 * {
@@ -12,7 +14,7 @@
   font-family: monospace;
   user-select: none;
   background-color: var(--bg);
-  color: var(--text);
+  color: var(--text2);
 }
 
 body {

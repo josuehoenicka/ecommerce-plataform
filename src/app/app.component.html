@@ -1,4 +1,8 @@
 <div>
+  <h1>Class & Styles</h1>
+  <input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name"/>
+  <p>The input is required</p>
+  <hr/>
   <h1>[ngSwith]</h1>
   <input type="text" required [(ngModel)]="person.name" style="margin: 1em 0;"/>
   <div [ngSwitch]="person.name">
