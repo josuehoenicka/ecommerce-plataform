@@ -133,7 +133,7 @@ export class AppComponent {
   }
 
   onRegister() {
-    console.log(this.register);
+    console.log('Tu objeto es' + this.register);
   }
 
   constructor () {
