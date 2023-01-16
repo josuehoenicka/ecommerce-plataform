@@ -4,11 +4,13 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { ImgComponent } from './components/img/img.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        ImgComponent
+        ImgComponent,
+        ProductComponent
     ],
     providers: [],
     bootstrap: [AppComponent],

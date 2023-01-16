@@ -1,4 +1,8 @@
-<p>
-  <input type="text" [(ngModel)]="imgParent"/>
-</p>
-<app-img (works)="imgFoundOnParent($event)" [img]="imgParent"></app-img>
+<div>
+  <p>
+    <input type="text" [(ngModel)]="imgParent"/>
+  </p>
+  <app-img (works)="imgFoundOnParent($event)" [img]="imgParent"></app-img>
+  <app-product [product]="product" *ngFor="let product of products"></app-product>
+
+</div>
