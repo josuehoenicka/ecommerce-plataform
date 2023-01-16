@@ -13,4 +13,9 @@ export class AppComponent {
 
   constructor () {
   }
+
+  imgFoundOnParent(img: string) {
+    console.log('log parent', img)
+  }
+
 }
