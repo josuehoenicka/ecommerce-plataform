@@ -10,6 +10,7 @@ import { Product } from './models/product.module'
 export class AppComponent {
   title = 'ecommerce-plataform';
   imgParent = '';
+  showImg = true;
 
   products: Product[] = [
     {
@@ -56,6 +57,10 @@ export class AppComponent {
 
   imgFoundOnParent(img: string) {
     console.log('log parent', img)
+  }
+
+  toogleImg() {
+    this.showImg = !this.showImg;
   }
 
 }
