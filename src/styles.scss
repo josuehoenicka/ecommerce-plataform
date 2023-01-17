@@ -1,8 +1,24 @@
 :root {
-  --bg:#1b1b1b;
-  --text: #8091cefa;
-  --text2: #7f8186fa;
-  --text3: #8091ceb6;
+  --hard_black: #000033;
+  --soft_black:  #57555c;
+  --hard_brown: #73553a;
+  --soft_brown: #896748;
+  --hard_orange: #fe8821;
+  --soft_orange: #fe9923;
+  --hard_yellow:#fec478;
+  --soft_yellow: #feb756;
+  --hard_white: #eee7e7;
+  --soft_white: #afaeae;
+}
+
+@font-face {
+  font-family: Crash;
+  src: url(./assets/fonts/crash.ttf);
+}
+
+@font-face {
+  font-family: Spyro;
+  src: url(./assets/fonts/spyro.otf);
 }
 
 * {
@@ -11,20 +27,30 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   text-decoration: none;
-  font-family: monospace;
   user-select: none;
-  background-color: var(--bg);
-  color: var(--text2);
+  font-family: 'Spyro';
+  color: var(--soft_white);
 }
 
 *::-webkit-scrollbar {
   display: none;
 }
 
+body {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.6)),
+    url("./assets/bg/bg.gif");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .products--grid {
   app-img {
     img {
-      border-radius: 2em;
+      border-radius: 10em;
     }
   }
 }

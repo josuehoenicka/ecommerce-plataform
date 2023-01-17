@@ -11,40 +11,64 @@ export class ProductsComponent implements OnInit {
   products: Product[] = [
     {
       id: '1',
-      name: 'EL mejor juguete',
-      price: 565,
-      img: 'https://static.platzi.com/media/user_upload/toy-a0d1c980-a8ce-4fa4-83d6-3b016999a162.jpg'
+      name: 'Army Of Two II',
+      price: 45,
+      img: '../../../assets/images/aot2.jpg'
     },
     {
       id: '2',
-      name: 'Bicicleta casi nueva',
-      price: 356,
-      img: 'https://static.platzi.com/media/user_upload/bike-143dcfe9-3190-49fd-88f7-d3bf74182072.jpg'
+      name: 'inFAMOUS 2',
+      price: 39.99,
+      img: '../../../assets/images/infamous2.jpg'
     },
     {
       id: '3',
-      name: 'Colleción de albumnes',
-      price: 34,
-      img: 'https://static.platzi.com/media/user_upload/books-80160e05-d177-420b-89c5-01a97b2bdb76.jpg'
+      name: 'All-Stars',
+      price: 39.99,
+      img: '../../../assets/images/allstar.jpg'
     },
     {
       id: '4',
-      name: 'Mis libros',
-      price: 23,
-      img: 'https://static.platzi.com/media/user_upload/album-6f4213d5-1d2d-4e0f-96fe-edb36c3255b4.jpg'
+      name: 'Minecraft',
+      price: 34.99,
+      img: '../../../assets/images/minecraft.jpg'
     },
     {
       id: '5',
-      name: 'Casita michi',
-      price: 125,
-      img: 'https://static.platzi.com/media/user_upload/house-034b0c04-eeff-42fa-b506-79f18f73ff90.jpg'
+      name: 'Ratchet',
+      price: 29.99,
+      img: '../../../assets/images/ratchet.jpg'
     },
     {
       id: '6',
-      name: 'Lentes vintage',
-      price: 82,
-      img: 'https://static.platzi.com/media/user_upload/glasses-05350737-5831-4c98-be55-824399206dba.jpg'
+      name: 'Army Of Two II',
+      price: 45,
+      img: '../../../assets/images/aot2.jpg'
     },
+    {
+      id: '7',
+      name: 'inFAMOUS 2',
+      price: 39.99,
+      img: '../../../assets/images/infamous2.jpg'
+    },
+    {
+      id: '8',
+      name: 'All-Stars',
+      price: 39.99,
+      img: '../../../assets/images/allstar.jpg'
+    },
+    {
+      id: '9',
+      name: 'Minecraft',
+      price: 34.99,
+      img: '../../../assets/images/minecraft.jpg'
+    },
+    {
+      id: '10',
+      name: 'Ratchet',
+      price: 29.99,
+      img: '../../../assets/images/ratchet.jpg'
+    }
   ]
 
   constructor() { }
