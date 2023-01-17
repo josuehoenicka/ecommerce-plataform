@@ -19,8 +19,8 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   imgEmpty = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4DCCLp1uFPtbvLRmI-NQh-NgRYo5croM9tQ&usqp=CAU';
   imgError = 'https://media.cnn.com/api/v1/images/stellar/prod/190517103414-01-grumpy-cat-file-restricted.jpg?q=w_3000,h_2049,x_0,y_0,c_fill'
   imgMessi = 'https://ichef.bbci.co.uk/news/640/cpsprodpb/2D36/production/_128047511_gettyimages-1450126571.jpg'
-  counter = 0;
-  counterFn: number | undefined;
+  // counter = 0;
+  // counterFn: number | undefined;
 
   constructor() {
     // Before render
@@ -39,10 +39,10 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
     // Before render
     // Asycn (fetch, promises, http request) - Once Time
     console.log('ngOnInit', 'imgValue =>', this.img);
-    this.counterFn = window.setInterval(() => {
-      this.counter += 1;
-      console.log('counter =>', this.counter)
-    }, 1000)
+    // this.counterFn = window.setInterval(() => {
+    //   this.counter += 1;
+    //   console.log('counter =>', this.counter)
+    // }, 1000)
   }
 
   ngAfterViewInit(): void {
@@ -54,7 +54,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   ngOnDestroy(): void {
     // Delete
     console.log('ngOnDestroy');
-    window.clearInterval(this.counterFn);
+    // window.clearInterval(this.counterFn);
   }
 
   imgNoFound() {
