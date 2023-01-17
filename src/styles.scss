@@ -17,13 +17,14 @@
   color: var(--text2);
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-}
-
-/*
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   display: none;
 }
-*/
+
+.products--grid {
+  app-img {
+    img {
+      border-radius: 2em;
+    }
+  }
+}
