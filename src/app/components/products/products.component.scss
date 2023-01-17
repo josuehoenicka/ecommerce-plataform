@@ -4,6 +4,20 @@
   flex-direction: column;
 }
 
+.textAboutCart {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: #000000;
+  top: 3.5em;
+  padding: 0.5em 0;
+  p {
+    margin: 0 2em;
+  }
+}
+
 // Tablets
 @media  screen and (min-width: 40em) and (max-width: 63.9em){
   .products--grid {
@@ -19,6 +33,13 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1em;
+  }
+  .textAboutCart {
+    position: fixed;
+    padding: 1em 0;
+    p {
+      margin: 0 4em;
+    }
   }
 }
 

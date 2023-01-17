@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../../models/product.module';
 
 @Component({
@@ -7,6 +7,9 @@ import { Product } from '../../models/product.module';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+
+  myShoppingCart: Product[] = [];
+  total = 0;
 
   products: Product[] = [
     {
@@ -18,56 +21,56 @@ export class ProductsComponent implements OnInit {
     {
       id: '2',
       name: 'inFAMOUS 2',
-      price: 39.99,
+      price: 40,
       img: '../../../assets/images/infamous2.jpg'
     },
     {
       id: '3',
       name: 'All-Stars',
-      price: 39.99,
+      price: 40,
       img: '../../../assets/images/allstar.jpg'
     },
     {
       id: '4',
       name: 'Minecraft',
-      price: 34.99,
+      price: 35,
       img: '../../../assets/images/minecraft.jpg'
     },
     {
       id: '5',
       name: 'Ratchet',
-      price: 29.99,
+      price: 25,
       img: '../../../assets/images/ratchet.jpg'
     },
     {
-      id: '6',
-      name: 'Army Of Two II',
-      price: 45,
-      img: '../../../assets/images/aot2.jpg'
+      id: '',
+      name: '',
+      price: 0,
+      img: ''
     },
     {
-      id: '7',
-      name: 'inFAMOUS 2',
-      price: 39.99,
-      img: '../../../assets/images/infamous2.jpg'
+      id: '',
+      name: '',
+      price: 0,
+      img: ''
     },
     {
-      id: '8',
-      name: 'All-Stars',
-      price: 39.99,
-      img: '../../../assets/images/allstar.jpg'
+      id: '',
+      name: '',
+      price: 0,
+      img: ''
     },
     {
-      id: '9',
-      name: 'Minecraft',
-      price: 34.99,
-      img: '../../../assets/images/minecraft.jpg'
+      id: '',
+      name: '',
+      price: 0,
+      img: ''
     },
     {
-      id: '10',
-      name: 'Ratchet',
-      price: 29.99,
-      img: '../../../assets/images/ratchet.jpg'
+      id: '',
+      name: '',
+      price: 0,
+      img: ''
     }
   ]
 
@@ -77,7 +80,8 @@ export class ProductsComponent implements OnInit {
   }
 
   addToShoppingCart(product: Product) {
-    console.log(product);
+    this.myShoppingCart.push(product);
+    this.total = this.myShoppingCart.reduce((sum, item) => sum + item.price, 0);
   }
 
 }

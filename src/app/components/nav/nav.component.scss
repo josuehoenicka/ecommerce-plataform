@@ -17,6 +17,9 @@
 
 .hide-mobile {
   display: none;
+  position: fixed;
+  width: 100vw;
+  background-color: #000000;;
   box-shadow: 0px 2px 5px rgb(black, .2);
   > div {
     padding: 1em;
