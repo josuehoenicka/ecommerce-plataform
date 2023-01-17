@@ -38,14 +38,7 @@
 }
 
 body {
-  background-image: linear-gradient(
-    rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.6)),
-    url("./assets/bg/bg.gif");
-  background-repeat: repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: #000000;
 }
 
 .products--grid {
@@ -53,5 +46,18 @@ body {
     img {
       border-radius: 10em;
     }
+  }
+}
+
+@media screen and (min-width: 40em) {
+  body {
+    background-image: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.6)),
+    url("./assets/bg/bg.gif");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
   }
 }

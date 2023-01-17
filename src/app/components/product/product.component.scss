@@ -1,6 +1,6 @@
 div {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,4 +16,10 @@ p {
 
   color: var(--soft_white);
   font-size: 1em;
+}
+
+@media screen and (min-width: 40em) {
+  div {
+    height: 80vh;
+  }
 }
