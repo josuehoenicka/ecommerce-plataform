@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../models/product.module';
 // services
 import { StoreService } from '../../services/store.service'
+import { ProductsService } from '../../services/products.service'
 
 @Component({
   selector: 'app-products',
@@ -15,76 +16,20 @@ export class ProductsComponent implements OnInit {
   myShoppingCart: Product[] = [];
   total = 0;
 
-  products: Product[] = [
-    {
-      id: '1',
-      name: 'Army Of Two II',
-      price: 45,
-      img: '../../../assets/images/aot2.jpg'
-    },
-    {
-      id: '2',
-      name: 'inFAMOUS 2',
-      price: 40,
-      img: '../../../assets/images/infamous2.jpg'
-    },
-    {
-      id: '3',
-      name: 'All-Stars',
-      price: 40,
-      img: '../../../assets/images/allstar.jpg'
-    },
-    {
-      id: '4',
-      name: 'Minecraft',
-      price: 35,
-      img: '../../../assets/images/minecraft.jpg'
-    },
-    {
-      id: '5',
-      name: 'Ratchet',
-      price: 25,
-      img: '../../../assets/images/ratchet.jpg'
-    },
-    {
-      id: '',
-      name: '',
-      price: 0,
-      img: ''
-    },
-    {
-      id: '',
-      name: '',
-      price: 0,
-      img: ''
-    },
-    {
-      id: '',
-      name: '',
-      price: 0,
-      img: ''
-    },
-    {
-      id: '',
-      name: '',
-      price: 0,
-      img: ''
-    },
-    {
-      id: '',
-      name: '',
-      price: 0,
-      img: ''
-    }
-  ]
+  products: Product[] = []
 
   constructor(
-    private storeService: StoreService
+    private storeService: StoreService,
+    private productsService: ProductsService
   ) {
     this.myShoppingCart = this.storeService.getShoppingCart();
    }
 
   ngOnInit(): void {
+    this.productsService.getAllProducts()
+    .subscribe(dataAPI => {
+      this.products = dataAPI;
+    });
   }
 
   addToShoppingCart(product: Product) {

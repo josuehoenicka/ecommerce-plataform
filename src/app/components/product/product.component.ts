@@ -9,10 +9,12 @@ import { Product } from '../../models/product.module'
 export class ProductComponent implements OnInit {
 
   @Input() product: Product = {
-    id: '',
-    name: '',
+    id: 0,
+    title: '',
     price: 0,
-    img: ''
+    description: '',
+    image: '',
+    category: '',
   }
   @Output() addedProduct = new EventEmitter<Product>();
 
