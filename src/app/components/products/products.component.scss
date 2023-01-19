@@ -21,6 +21,10 @@
   }
 }
 
+.connected {
+  display: none;
+}
+
 // Tablets
 @media  screen and (min-width: 40em) and (max-width: 63.9em){
   .products--grid {
@@ -47,6 +51,10 @@
         font-size: 0.9em;
       }
     }
+  }
+  .connected {
+    font-size: 0.8em;
+    display: block;
   }
 }
 

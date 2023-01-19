@@ -1,9 +1,9 @@
 <div class="textAboutCart">
   <div>
     <p>Date: {{ today | date: 'shortDate' }}</p>
-
     <p>Time: {{ today | date: 'shortTime' }}</p>
   </div>
+  <p class="connected">connected: {{ today | timeAgo }}</p>
   <div>
     <p>On Cart: {{ myShoppingCart.length }}</p>
     <p>Total: {{total | currency: 'USD'}}</p>
