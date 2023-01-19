@@ -2,6 +2,6 @@
   <app-img [img]="product.image"></app-img>
   <h2>{{product.price | currency: 'USD'}}</h2>
   <p>{{ truncatedTitle(18)}}</p>
-  <p class="p-active">{{ truncatedDescription(80) }}</p>
-  <button (click)="addToCart()" class="btnCart">Add cart</button>
+  <p class="p-active">{{ truncatedDescription(50) }}</p>
+  <button appHighlight (click)="addToCart()" class="btnCart">Add cart</button>
 </div>

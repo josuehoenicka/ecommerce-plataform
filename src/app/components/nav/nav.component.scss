@@ -1,4 +1,5 @@
 .show-mobile {
+  z-index: 1000 !important;
   position: fixed;
   width: 100vw;
   background-color: #000000;;
@@ -56,7 +57,7 @@
 }
 
 .side-menu{
-  z-index: 1000 !important;
+  z-index: 200;
   position: fixed;
   top: 0;
   left: 0;
