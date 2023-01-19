@@ -1,4 +1,15 @@
 img {
   padding: 1.5em;
-  max-width: 100%;
+  width: 18em;
+  height: 18em;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 40em) {
+  img {
+    padding: 1.5em;
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+  }
 }

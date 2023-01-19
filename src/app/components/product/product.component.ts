@@ -27,4 +27,11 @@ export class ProductComponent implements OnInit {
     this.addedProduct.emit(this.product);
   }
 
+  truncatedText(maxLength:number) {
+    if (this.product.title.length > maxLength) {
+      return this.product.title.slice(0, maxLength) + '...';
+    }
+    return this.product.title;
+  }
+
 }
