@@ -1,6 +1,13 @@
 <div class="textAboutCart">
-  <p>On cart = {{ myShoppingCart.length }}</p>
-  <p>Total = ${{total}}</p>
+  <div>
+    <p>Date: {{ today | date: 'shortDate' }}</p>
+
+    <p>Time: {{ today | date: 'shortTime' }}</p>
+  </div>
+  <div>
+    <p>On Cart: {{ myShoppingCart.length }}</p>
+    <p>Total: {{total | currency: 'USD'}}</p>
+  </div>
 </div>
 <div class="products--grid">
   <app-product
