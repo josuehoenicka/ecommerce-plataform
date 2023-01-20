@@ -56,6 +56,18 @@
   width: 2em;
 }
 
+.counter {
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  color: var(--hard_black);
+  font-size: 0.88em;
+  padding: 0.25em 0.5em;
+  text-align: center;
+  border-radius: 2em;
+  background-color: var(--soft_white);
+}
+
 .side-menu{
   z-index: 200;
   position: fixed;
