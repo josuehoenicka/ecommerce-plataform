@@ -14,7 +14,7 @@ export class ProductComponent implements OnInit {
     price: 0,
     description: '',
     image: '',
-    category: '',
+    category: ''
   }
   @Output() addedProduct = new EventEmitter<Product>();
 

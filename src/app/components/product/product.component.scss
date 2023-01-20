@@ -13,10 +13,7 @@ h2 {
 }
 
 p {
-  color: var(--soft_white);
-  font-size: 1em;
-  text-align: center;
-  padding: 0.3em 2.3em;
+  display: none;
 }
 
 .p-active {
@@ -40,5 +37,9 @@ p {
   }
   p {
     padding: 0.3em 0;
+    display: block;
+    color: var(--soft_white);
+    font-size: 1em;
+    text-align: center;
   }
 }
