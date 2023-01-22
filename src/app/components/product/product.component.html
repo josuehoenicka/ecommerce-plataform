@@ -1,5 +1,5 @@
 <div class="">
-  <app-img [img]="product.images[0]"></app-img>
+  <app-img *ngIf="product.images.length > 0" [img]="product.images[0]"></app-img>
   <h2>{{product.price | currency: 'USD'}}</h2>
   <p>{{ truncatedTitle(18)}}</p>
   <p class="p-active">{{ truncatedDescription(50) }}</p>
