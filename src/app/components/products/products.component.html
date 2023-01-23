@@ -15,6 +15,7 @@
   [product]="product"
   *ngFor="let product of products"
   (addedProduct)="addToShoppingCart($event)"
+  (showProduct)="onShowDetail($event)"
   ></app-product>
 </div>
 <div class="product-detail" [class.active]="showProductDetail">

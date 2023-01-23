@@ -20,6 +20,7 @@ export class ProductComponent implements OnInit {
     }
   }
   @Output() addedProduct = new EventEmitter<Product>();
+  @Output() showProduct = new EventEmitter<number>();
 
   constructor() { }
 
@@ -42,6 +43,10 @@ export class ProductComponent implements OnInit {
       return this.product.description.slice(0, maxLength) + '...';
     }
     return this.product.description;
+  }
+
+  onShowDetail() {
+    this.showProduct.emit(this.product.id);
   }
 
 }

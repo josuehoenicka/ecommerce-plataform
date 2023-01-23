@@ -62,7 +62,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   }
 
   imgFound() {
-    console.log('log child')
+    // console.log('log child')
     this.works.emit(this.img);
   }
 
