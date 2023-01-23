@@ -19,6 +19,17 @@ export class ProductsComponent implements OnInit {
   today = new Date();
   date = new Date(2001, 8, 31);
   showProductDetail = false;
+  productChosen: Product = {
+    id: 0,
+    title: '',
+    price: 0,
+    description: '',
+    images: [],
+    category: {
+      id: 0,
+      title: ''
+    }
+  };
 
   constructor(
     private storeService: StoreService,
@@ -48,7 +59,8 @@ export class ProductsComponent implements OnInit {
   onShowDetail(id: number) {
     this.productsService.getProduct(id)
     .subscribe(data => {
-      console.log('product', data);
+      this.toogleProductDetail();
+      this.productChosen = data;
     })
   }
 
