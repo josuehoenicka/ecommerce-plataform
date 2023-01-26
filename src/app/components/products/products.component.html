@@ -9,7 +9,8 @@
     <p>Total: {{total | currency: 'USD'}}</p>
   </div>
 </div>
-<!-- <button style="width: 50vw; height: 50vh;" (click)="createNewProduct()">CLICK ON ME</button> -->
+<button style="width: 50vw; height: 50vh;" (click)="createNewProduct()">Create</button>
+<button style="width: 50vw; height: 50vh;" (click)="onShowDetail(213123)">Detalle no found</button>
 <div class="products--grid">
   <app-product
   [product]="product"
@@ -20,6 +21,7 @@
   <button (click)="loadMore()">LOAD MORE</button>
 </div>
 <div class="product-detail" [class.active]="showProductDetail">
+  {{ statusDetail }}
   <div *ngIf="productChosen">
     <button (click)="toogleProductDetail()">Close</button>
     <h1>{{productChosen.title}}</h1>
