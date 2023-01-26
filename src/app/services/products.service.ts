@@ -1,6 +1,8 @@
 // @angular
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+// environments
+import { environment } from './../../environments/environment';
 // rxjs
 import { retry } from 'rxjs/operators';
 // models
@@ -11,7 +13,7 @@ import { Product, CreateProductDTO, UpdateProductDTO } from '../models/product.m
 })
 export class ProductsService {
 
-  private apiUrl = '/api/products';
+  private apiUrl = `${environment.API_URL}/api/products`;
 
   myPersonalProducts = [
     {
