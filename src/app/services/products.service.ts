@@ -1,6 +1,8 @@
 // @angular
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+// rxjs
+import { retry } from 'rxjs/operators';
 // models
 import { Product, CreateProductDTO, UpdateProductDTO } from '../models/product.module';
 
@@ -54,7 +56,10 @@ export class ProductsService {
       params = params.set('limit', limit);
       params = params.set('offset', limit)
     }
-    return this.http.get<Product[]>(this.apiUrl, { params });
+    return this.http.get<Product[]>(this.apiUrl, { params })
+    .pipe(
+      retry(3)
+    );
   }
 
   getProduct(id: number) {
