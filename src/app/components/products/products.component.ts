@@ -30,6 +30,8 @@ export class ProductsComponent implements OnInit {
       title: ''
     }
   };
+  limit = 10;
+  offset = 0;
 
   constructor(
     private storeService: StoreService,
@@ -39,7 +41,7 @@ export class ProductsComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.productsService.getAllProducts()
+    this.productsService.getProductsByPage(10, 0)
     .subscribe(dataAPI => {
       this.products = dataAPI;
     });
@@ -98,6 +100,14 @@ export class ProductsComponent implements OnInit {
       const productIndex = this.products.findIndex(item => item.id === this.productChosen.id);
       this.products.splice(productIndex, 1);
       this.showProductDetail = false;
+    });
+  }
+
+  loadMore() {
+    this.productsService.getProductsByPage(this.limit, this.offset)
+    .subscribe(data => {
+      this.products = this.products.concat(data);
+      this.offset += this.limit;
     });
   }
 
