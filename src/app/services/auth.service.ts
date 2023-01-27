@@ -13,8 +13,7 @@ import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
-})
-export class AuthService {
+})export class AuthService {
 
   private apiUrl = `${environment.API_URL}/api/auth`;
 
@@ -32,7 +31,7 @@ export class AuthService {
 
   getProfile() {
     // const headers = new HttpHeaders();
-    // headers.set('Authorization', `Bearer ${token}`)
+    // headers.set('Authorization',  `Bearer ${token}`);
     return this.http.get<User>(`${this.apiUrl}/profile`, {
       // headers: {
       //   Authorization: `Bearer ${token}`,
@@ -44,8 +43,7 @@ export class AuthService {
   loginAndGet(email: string, password: string) {
     return this.login(email, password)
     .pipe(
-      switchMap(() => this.getProfile()),
+      switchMap(() => this.getProfile())
     )
   }
-
 }

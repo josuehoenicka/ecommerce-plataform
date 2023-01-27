@@ -7,6 +7,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { SwiperModule } from 'swiper/angular';
 // interceptor
 import { TimeInterceptor } from './interceptors/time.interceptor'
+import { TokenInterceptor } from './interceptors/token.interceptor'
 // app
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -32,7 +33,8 @@ import { HighlightDirective } from './directives/highlight.directive';
         HighlightDirective
     ],
     providers: [
-      { provide: HTTP_INTERCEPTORS, useClass: TimeInterceptor, multi: true }
+      { provide: HTTP_INTERCEPTORS, useClass: TimeInterceptor, multi: true },
+      { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
     ],
     bootstrap: [AppComponent],
     imports: [
