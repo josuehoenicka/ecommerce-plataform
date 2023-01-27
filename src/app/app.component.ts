@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'ecommerce-plataform';
   imgParent = '';
   showImg = true;
+  token = '';
 
   constructor (
     private authService: AuthService,
@@ -42,6 +43,14 @@ export class AppComponent {
     this.authService.login('josuehoenicka@gmail.com', '12345678')
     .subscribe(rta => {
       console.log(rta.access_token);
+      this.token = rta.access_token;
+    });
+  }
+
+  getProfile() {
+    this.authService.profile(this.token)
+    .subscribe( profile => {
+      console.log(profile);
     });
   }
 
