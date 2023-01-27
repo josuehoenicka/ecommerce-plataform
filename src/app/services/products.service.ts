@@ -5,7 +5,7 @@ import { HttpClient, HttpParams, HttpErrorResponse, HttpStatusCode } from '@angu
 import { environment } from './../../environments/environment';
 // rxjs
 import { retry, catchError, map } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import { throwError, zip } from 'rxjs';
 // models
 import { Product, CreateProductDTO, UpdateProductDTO } from '../models/product.module';
 
@@ -29,6 +29,13 @@ export class ProductsService {
     return this.http.get<Product[]>(this.apiUrl, { params })
     .pipe(
       retry(3)
+    );
+  }
+
+  fetchReadAndUpdate(id: number, dto: UpdateProductDTO) {
+    return zip(
+      this.getProduct(id),
+      this.update(id, dto)
     );
   }
 
