@@ -7,7 +7,7 @@ import { environment } from './../../environments/environment';
 import { retry, catchError, map } from 'rxjs/operators';
 import { throwError, zip } from 'rxjs';
 // models
-import { Product, CreateProductDTO, UpdateProductDTO } from '../models/product.module';
+import { Product, CreateProductDTO, UpdateProductDTO } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'

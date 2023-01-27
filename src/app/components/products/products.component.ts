@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { zip } from 'rxjs'
 import { switchMap } from 'rxjs/operators'
 // modules
-import { Product, CreateProductDTO, UpdateProductDTO } from '../../models/product.module';
+import { Product, CreateProductDTO, UpdateProductDTO } from '../../models/product.model';
 // services
 import { StoreService } from '../../services/store.service'
 import { ProductsService } from '../../services/products.service'
