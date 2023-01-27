@@ -4,7 +4,7 @@ import { HttpClient, HttpParams, HttpErrorResponse, HttpStatusCode } from '@angu
 // environments
 import { environment } from './../../environments/environment';
 // rxjs
-import { retry, catchError } from 'rxjs/operators';
+import { retry, catchError, map } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 // models
 import { Product, CreateProductDTO, UpdateProductDTO } from '../models/product.module';
@@ -53,7 +53,16 @@ export class ProductsService {
   getProductsByPage(limit: number, offset: number){
     return this.http.get<Product[]>(`${this.apiUrl}`, {
       params: { limit, offset }
-    });
+    })
+    .pipe
+    (
+      map(products => products.map(item =>{
+        return {
+          ...item,
+          taxes: .10 * item.price
+        }
+      }))
+    );
   }
 
   create(dto: CreateProductDTO){

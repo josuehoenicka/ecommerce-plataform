@@ -28,7 +28,7 @@ export class ProductsComponent implements OnInit {
     category: {
       id: 0,
       title: ''
-    }
+    },
   };
   limit = 10;
   offset = 0;
