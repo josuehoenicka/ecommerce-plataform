@@ -41,7 +41,7 @@ export class AppComponent {
   login() {
     this.authService.login('josuehoenicka@gmail.com', '12345678')
     .subscribe(rta => {
-      console.log(rta);
+      console.log(rta.access_token);
     });
   }
 

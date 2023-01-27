@@ -1,6 +1,8 @@
 // @angular
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+// models
+import { Auth } from './../models/auth.model';
 // environment
 import { environment } from './../../environments/environment';
 
@@ -16,7 +18,7 @@ export class AuthService {
   ) { }
 
   login(email: string, password: string) {
-    return this.http.post(`${this.apiUrl}/login`, {email, password});
+    return this.http.post<Auth>(`${this.apiUrl}/login`, {email, password});
   }
 
   profile() {
