@@ -29,6 +29,14 @@ export class ProductsComponent implements OnInit {
     .subscribe(data => {
       this.products = data;
     });
+    this.loadTest();
+  }
+
+  public loadTest() {
+    this.productsService.getTest(`https://codebashapi.onrender.com/`)
+    .subscribe(data => {
+      console.log(data);
+    })
   }
 
   onAddToShoppingCart(product: Product) {
