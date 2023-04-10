@@ -1,9 +1,0 @@
-<div class="">
-  <app-img *ngIf="product.images.length > 0" [img]="product.images[0]"></app-img>
-  <h4>Taxes: {{ product?.taxes | currency: 'USD' }}</h4>
-  <h2>{{product.price | currency: 'USD'}}</h2>
-  <h3>{{ truncatedTitle(13)}}</h3>
-  <!-- <p class="p-active">{{ truncatedDescription(50) }}</p> -->
-  <button (click)="onShowDetail()" class="btnCart">See details</button>
-  <button (click)="addToCart()" class="btnCart">Add cart</button>
-</div>
